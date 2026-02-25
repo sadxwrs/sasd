@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebFest 2026 — Конференция для frontend-разработчиков</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <h1>WebFest 2026</h1>
+      <p class="hero-date">18–19 июня 2026 • Москва, Цифровой океан</p>
+      <p class="hero-lead">
+        Двухдневная конференция нового поколения о будущем фронтенда, AI в интерфейсах, WebGPU, 
+        производительности и людях, которые это всё создают.
+      </p>
+      <a href="#reg" class="btn btn--primary">Зарегистрироваться</a>
+    </div>
+  </header>
+
+  <nav aria-label="Основная навигация" class="site-nav">
+    <div class="container">
+      <ul class="nav-list">
+        <li><a href="#about">О событии</a></li>
+        <li><a href="#agenda">Программа</a></li>
+        <li><a href="#speakers">Спикеры</a></li>
+        <li><a href="#reg">Регистрация</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>О фестивале</h2>
+        <p>
+          WebFest — это не просто ещё одна конференция. Это место, где в 2026 году собираются те, 
+          кто реально двигает фронтенд вперёд: от экспериментов с WebAssembly + TypeScript до 
+          интеграции локальных LLM прямо в браузер и создания интерфейсов, которые опережают 
+          ожидания пользователей на несколько лет.
+        </p>
+        <p>
+          Два дня глубоких технических докладов, честных разговоров о провалах и победах, 
+          нетворкинг без корпоративной шелухи и атмосфера, в которой действительно хочется 
+          писать код после конференции.
+        </p>
+
+        <h3>Для кого будет полезно</h3>
+        <ul class="benefits">
+          <li>Frontend-разработчикам middle → senior, которые хотят выйти на новый уровень</li>
+          <li>Техлидам и архитекторам, ищущим свежие идеи и проверенные подходы</li>
+          <li>Продуктовым дизайнерам, которые плотно работают с кодом</li>
+          <li>Разработчикам, которые уже экспериментируют с AI / WebGPU / Rust → WASM</li>
+          <li>Всем, кому надоело однообразие и хочется живого общения с сильным комьюнити</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="agenda" class="section section--alt">
+      <div class="container">
+        <h2>Программа</h2>
+
+        <div class="agenda-grid">
+          <div class="agenda-item">
+            <time>10:00 – 10:45</time>
+            <div class="agenda-content">
+              <h3>Открытие и State of Frontend 2026</h3>
+              <p class="speaker-name">Дмитрий Филатов</p>
+            </div>
+          </div>
+
+          <div class="agenda-item">
+            <time>11:00 – 11:45</time>
+            <div class="agenda-content">
+              <h3>WebGPU в продакшене: от теории к реальным 120 fps</h3>
+              <p class="speaker-name">Алина Кравцова</p>
+            </div>
+          </div>
+
+          <div class="agenda-item">
+            <time>12:00 – 12:45</time>
+            <div class="agenda-content">
+              <h3>AI-first интерфейсы: как мы перестали писать useEffect</h3>
+              <p class="speaker-name">Михаил Ветров</p>
+            </div>
+          </div>
+
+          <div class="agenda-item">
+            <time>14:00 – 14:45</time>
+            <div class="agenda-content">
+              <h3>Component libraries 2026: death of design systems?</h3>
+              <p class="speaker-name">Екатерина Смирнова</p>
+            </div>
+          </div>
+
+          <div class="agenda-item">
+            <time>15:00 – 15:45</time>
+            <div class="agenda-content">
+              <h3>Panel: Frontend в эпоху AGI — что останется нам?</h3>
+              <p class="speaker-name">Все спикеры + модератор</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="speakers" class="section">
+      <div class="container">
+        <h2>Спикеры</h2>
+
+        <div class="speakers-grid">
+          <article class="speaker-card">
+            <div class="speaker-photo" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop');"></div>
+            <h3>Дмитрий Филатов</h3>
+            <p class="speaker-role">Tech Lead @ Yandex Music</p>
+            <p>Автор популярного телеграм-канала о производительности фронтенда, 12+ лет в индустрии.</p>
+          </article>
+
+          <article class="speaker-card">
+            <div class="speaker-photo" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop');"></div>
+            <h3>Алина Кравцова</h3>
+            <p class="speaker-role">Graphics Engineer @ SberDevices</p>
+            <p>Одна из первых в СНГ, кто запустил WebGPU в продакшен-приложении с миллионами пользователей.</p>
+          </article>
+
+          <article class="speaker-card">
+            <div class="speaker-photo" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop');"></div>
+            <h3>Михаил Ветров</h3>
+            <p class="speaker-role">Founder @ AI-Frontend Lab</p>
+            <p>Экспериментирует с интеграцией локальных LLM в браузерные приложения уже более трёх лет.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reg" class="section section--accent">
+      <div class="container">
+        <h2>Регистрация</h2>
+
+        <form class="reg-form" method="post" action="#">
+          <div class="form-field">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" placeholder="Александр" required />
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="form-field">
+            <label for="role">Кем работаете</label>
+            <select id="role" name="role" required>
+              <option value="" disabled selected>Выберите вариант</option>
+              <option value="developer">Разработчик</option>
+              <option value="designer">Дизайнер</option>
+              <option value="lead">Руководитель</option>
+              <option value="student">Студент</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+
+          <div class="form-field checkbox-field">
+            <input type="checkbox" id="privacy" name="privacy" required />
+            <label for="privacy">Соглашаюсь с <a href="#">политикой обработки персональных данных</a></label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--large">Зарегистрироваться</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 WebFest • Сделано с любовью к фронтенду</p>
+      <p class="contacts">
+        <a href="https://t.me/webfest2026">Telegram</a> • 
+        <a href="mailto:hello@webfest2026.ru">hello@webfest2026.ru</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
