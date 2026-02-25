@@ -1,0 +1,248 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --pad: clamp(1rem, 5vw, 3rem);
+  --max-container: 1180px;
+  --radius: 12px;
+  --transition: 0.18s ease;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: clamp(15px, 2.2vw, 17px);
+  line-height: 1.55;
+  color: #1d1d1f;
+  background: #f8f9fc;
+}
+
+.container {
+  width: min(100% - var(--pad) * 2, var(--max-container));
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  margin: 0.8em 0 0.5em;
+}
+
+h1 { font-size: clamp(2.1rem, 6vw, 3.8rem); }
+h2 { font-size: clamp(1.8rem, 5vw, 2.9rem); }
+h3 { font-size: clamp(1.35rem, 3.8vw, 1.65rem); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75em 1.5em;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: #0066ff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #0055dd;
+  transform: translateY(-1px);
+}
+
+.btn-large {
+  padding: 1em 2em;
+  font-size: 1.1rem;
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(135deg, #0a1d4e 0%, #001e6e 100%);
+  color: white;
+  padding: clamp(4rem, 12vw, 8rem) 0 5rem;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.branding .slogan {
+  margin: 0.6em 0 0;
+  font-size: clamp(1.1rem, 3vw, 1.45rem);
+  opacity: 0.92;
+}
+
+/* Nav */
+.site-nav {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #1d1d1f;
+  font-weight: 550;
+  padding: 1.1rem 0.4rem;
+  transition: color 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #0066ff;
+}
+
+/* Sections */
+.section {
+  padding: clamp(3.5rem, 8vw, 7rem) 0;
+}
+
+.about .two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 2.6fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  margin-top: 2.5rem;
+}
+
+.aside {
+  background: white;
+  padding: 1.8rem;
+  border-radius: var(--radius);
+  box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+}
+
+.benefits {
+  padding-left: 1.4rem;
+  margin: 1.3rem 0 0;
+}
+
+.benefits li {
+  margin-bottom: 0.9em;
+}
+
+/* Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(1.2rem, 3vw, 2rem);
+  margin-top: 2.8rem;
+}
+
+.card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: all var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #0066ff;
+}
+
+/* Form */
+.form-join {
+  max-width: 540px;
+  margin: 3rem auto 0;
+  background: white;
+  padding: clamp(1.8rem, 5vw, 2.8rem);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.09);
+}
+
+.form-group {
+  margin-bottom: 1.6rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 550;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 0.85em 1.1em;
+  border: 1px solid #d0d5e0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #0066ff;
+  box-shadow: 0 0 0 3px rgba(0,102,255,0.12);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1.8rem 0 2.2rem;
+}
+
+.checkbox-group a {
+  color: #0066ff;
+}
+
+/* Footer */
+.site-footer {
+  background: #0f1e44;
+  color: #c5d0e8;
+  text-align: center;
+  padding: 2.5rem 0;
+  margin-top: 3rem;
+}
+
+/* Адаптив — минимум медиа-запросов */
+@media (max-width: 680px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .aside {
+    order: 1;
+  }
+
+  .content {
+    order: 2;
+  }
+}

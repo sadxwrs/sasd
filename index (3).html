@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TravelDream — Туры мечты от надёжного агентства</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="#">Travel<span class="text-primary">Dream</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#main">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tours">Туры</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
+        <li class="nav-item"><a class="nav-link" href="#booking">Оформить тур</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacts">Контакты</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="main" class="hero text-white text-center d-flex align-items-center">
+  <div class="container">
+    <h1 class="display-3 fw-bold mb-3">Путешествия, о которых мечтают</h1>
+    <p class="lead fs-4 mb-4">Более 1200 туров по всему миру • Гарантия лучшей цены • Поддержка 24/7</p>
+    <a href="#tours" class="btn btn-primary btn-lg px-5 py-3">Подобрать тур</a>
+  </div>
+</section>
+
+<section id="tours" class="py-5 bg-light">
+  <div class="container pt-5">
+    <div class="row">
+
+      <div class="col-lg-3 mb-4 mb-lg-0">
+        <div class="card shadow-sm border-0 p-3 sticky-top" style="top: 80px;">
+          <h4 class="mb-4">Фильтры</h4>
+
+          <div class="mb-4">
+            <label for="direction" class="form-label fw-bold">Направление</label>
+            <select class="form-select" id="direction">
+              <option selected>Любое</option>
+              <option>Европа</option>
+              <option>Азия</option>
+              <option>Америка</option>
+              <option>Африка</option>
+              <option>Россия</option>
+              <option>ОАЭ и Ближний Восток</option>
+              <option>Острова</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label fw-bold">Тип тура</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="any-type" checked>
+              <label class="form-check-label" for="any-type">Любой</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="beach">
+              <label class="form-check-label" for="beach">Пляжный</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="excursion">
+              <label class="form-check-label" for="excursion">Экскурсионный</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="ski">
+              <label class="form-check-label" for="ski">Горнолыжный</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="active">
+              <label class="form-check-label" for="active">Активный</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="family">
+              <label class="form-check-label" for="family">Семейный</label>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label fw-bold">Цена (₽)</label>
+            <div class="row g-2">
+              <div class="col-6">
+                <input type="number" class="form-control" placeholder="от" min="0">
+              </div>
+              <div class="col-6">
+                <input type="number" class="form-control" placeholder="до" min="0">
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label for="days" class="form-label fw-bold">Количество дней</label>
+            <select class="form-select" id="days">
+              <option selected>Любое</option>
+              <option>до 5 дней</option>
+              <option>6–10 дней</option>
+              <option>11–14 дней</option>
+              <option>15+ дней</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label fw-bold">Даты</label>
+            <div class="row g-2">
+              <div class="col-6">
+                <input type="date" class="form-control">
+              </div>
+              <div class="col-6">
+                <input type="date" class="form-control">
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary w-100 py-3">Применить фильтры</button>
+        </div>
+      </div>
+
+      <div class="col-lg-9">
+        <h2 class="mb-4">Наши туры</h2>
+        <div class="row g-4">
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card tour-card h-100 shadow-sm border-0 position-relative">
+              <div class="tour-tag bg-danger text-white">Горящий тур</div>
+              <img src="assets/photo1.png" class="card-img-top" alt="Прага">
+              <div class="card-body">
+                <h5 class="card-title">Прага — романтика Старого города</h5>
+                <p class="text-muted mb-1">Чехия, Прага</p>
+                <p class="text-muted small mb-2">7 дней / 6 ночей</p>
+                <h6 class="text-primary mb-3">от 89 900 ₽</h6>
+                <p class="card-text small">Уютные улочки, Карлов мост, замок, чешская кухня и вечерние прогулки по Влтаве.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#booking" class="btn btn-primary w-100">Забронировать</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card tour-card h-100 shadow-sm border-0 position-relative">
+              <div class="tour-tag bg-success text-white">Райский релакс</div>
+              <img src="assets/photo2.png" class="card-img-top" alt="Бали">
+              <div class="card-body">
+                <h5 class="card-title">Бали — остров богов</h5>
+                <p class="text-muted mb-1">Индонезия, Бали</p>
+                <p class="text-muted small mb-2">11 дней / 10 ночей</p>
+                <h6 class="text-primary mb-3">от 168 000 ₽</h6>
+                <p class="card-text small">Пляжи, вулканы, рисовые террасы, йога и незабываемые закаты.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#booking" class="btn btn-primary w-100">Забронировать</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card tour-card h-100 shadow-sm border-0 position-relative">
+              <div class="tour-tag bg-info text-white">Зима + море</div>
+              <img src="assets/photo3.png" class="card-img-top" alt="Сочи">
+              <div class="card-body">
+                <h5 class="card-title">Сочи — горы и море</h5>
+                <p class="text-muted mb-1">Россия, Сочи / Красная Поляна</p>
+                <p class="text-muted small mb-2">6 дней / 5 ночей</p>
+                <h6 class="text-primary mb-3">от 64 500 ₽</h6>
+                <p class="card-text small">Катание на лыжах, олимпийские объекты, море и субтропики.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#booking" class="btn btn-primary w-100">Забронировать</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card tour-card h-100 shadow-sm border-0 position-relative">
+              <div class="tour-tag bg-primary text-white">Премиум</div>
+              <img src="assets/photo4.png" class="card-img-top" alt="Мальдивы">
+              <div class="card-body">
+                <h5 class="card-title">Мальдивы — all inclusive</h5>
+                <p class="text-muted mb-1">Мальдивская Республика</p>
+                <p class="text-muted small mb-2">9 дней / 8 ночей</p>
+                <h6 class="text-primary mb-3">от 285 000 ₽</h6>
+                <p class="card-text small">Белоснежные пляжи, бирюзовая вода, виллы над водой и полный релакс.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#booking" class="btn btn-primary w-100">Забронировать</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card tour-card h-100 shadow-sm border-0 position-relative">
+              <div class="tour-tag bg-warning text-dark">Семейный хит</div>
+              <img src="assets/photo5.png" class="card-img-top" alt="Анталья">
+              <div class="card-body">
+                <h5 class="card-title">Анталья — семейный отдых</h5>
+                <p class="text-muted mb-1">Турция, Анталья</p>
+                <p class="text-muted small mb-2">8 дней / 7 ночей</p>
+                <h6 class="text-primary mb-3">от 98 700 ₽</h6>
+                <p class="card-text small">Отели 5* Ultra All Inclusive, аквапарки, детские клубы и тёплое море.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#booking" class="btn btn-primary w-100">Забронировать</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card tour-card h-100 shadow-sm border-0 position-relative">
+              <div class="tour-tag bg-secondary text-white">Приключение</div>
+              <img src="assets/photo6.png" class="card-img-top" alt="Исландия">
+              <div class="card-body">
+                <h5 class="card-title">Исландия — кольцо чудес</h5>
+                <p class="text-muted mb-1">Исландия</p>
+                <p class="text-muted small mb-2">10 дней / 9 ночей</p>
+                <h6 class="text-primary mb-3">от 219 000 ₽</h6>
+                <p class="card-text small">Водопады, гейзеры, ледники, Голубая лагуна и северное сияние.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#booking" class="btn btn-primary w-100">Забронировать</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card tour-card h-100 shadow-sm border-0 position-relative">
+              <div class="tour-tag bg-info text-white">Экзотика + история</div>
+              <img src="assets/photo7.png" class="card-img-top" alt="Хургада">
+              <div class="card-body">
+                <h5 class="card-title">Хургада — море и пирамиды</h5>
+                <p class="text-muted mb-1">Египет, Хургада</p>
+                <p class="text-muted small mb-2">9 дней / 8 ночей</p>
+                <h6 class="text-primary mb-3">от 112 000 ₽</h6>
+                <p class="card-text small">Красное море, кораллы, экскурсия к пирамидам и Луксору.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#booking" class="btn btn-primary w-100">Забронировать</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card tour-card h-100 shadow-sm border-0 position-relative">
+              <div class="tour-tag bg-warning text-dark">Активный отдых</div>
+              <img src="assets/photo8.png" class="card-img-top" alt="Алтай">
+              <div class="card-body">
+                <h5 class="card-title">Алтай — активный тур</h5>
+                <p class="text-muted mb-1">Россия, Алтай</p>
+                <p class="text-muted small mb-2">8 дней / 7 ночей</p>
+                <h6 class="text-primary mb-3">от 78 400 ₽</h6>
+                <p class="card-text small">Рафтинг, конные прогулки, горные озёра и чистейший воздух.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#booking" class="btn btn-primary w-100">Забронировать</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card tour-card h-100 shadow-sm border-0 position-relative">
+              <div class="tour-tag bg-purple text-white">Весна мечты</div>
+              <img src="assets/photo9.png" class="card-img-top" alt="Япония">
+              <div class="card-body">
+                <h5 class="card-title">Япония — цветение сакуры</h5>
+                <p class="text-muted mb-1">Япония, Токио • Киото • Осака</p>
+                <p class="text-muted small mb-2">12 дней / 11 ночей</p>
+                <h6 class="text-primary mb-3">от 295 000 ₽</h6>
+                <p class="card-text small">Сакура, храмы, синкансэн, онсены и современный Токио.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#booking" class="btn btn-primary w-100">Забронировать</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card tour-card h-100 shadow-sm border-0 position-relative">
+              <div class="tour-tag bg-dark text-white">Люкс Восток</div>
+              <img src="assets/photo10.png" class="card-img-top" alt="Дубай">
+              <div class="card-body">
+                <h5 class="card-title">Дубай + Абу-Даби</h5>
+                <p class="text-muted mb-1">ОАЭ</p>
+                <p class="text-muted small mb-2">7 дней / 6 ночей</p>
+                <h6 class="text-primary mb-3">от 134 900 ₽</h6>
+                <p class="card-text small">Бурдж-Халифа, сафари, шопинг, Ferrari World и роскошь Востока.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#booking" class="btn btn-primary w-100">Забронировать</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-5">
+  <div class="container text-center pt-5">
+    <h2 class="mb-5">Почему выбирают TravelDream</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center pt-5 pb-5">
+            <div class="display-4 text-primary mb-3">★</div>
+            <h5>Гарантия лучшей цены</h5>
+            <p class="text-muted">Нашли дешевле? Вернём разницу!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center pt-5 pb-5">
+            <div class="display-4 text-primary mb-3">24/7</div>
+            <h5>Поддержка 24/7</h5>
+            <p class="text-muted">Отвечаем мгновенно в любой мессенджер</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center pt-5 pb-5">
+            <div class="display-4 text-primary mb-3">✓</div>
+            <h5>Оплата любым способом</h5>
+            <p class="text-muted">Рассрочка 0%, карта, СБП, наличные</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="booking" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Оформить тур</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4 p-md-5">
+            <form>
+              <div class="mb-4">
+                <label for="tourSelect" class="form-label fw-bold">Выберите тур</label>
+                <select class="form-select" id="tourSelect" required>
+                  <option value="" disabled selected>— выберите тур —</option>
+                  <option value="1">Прага — романтика Старого города (от 89 900 ₽)</option>
+                  <option value="2">Бали — остров богов (от 168 000 ₽)</option>
+                  <option value="3">Сочи — горы и море (от 64 500 ₽)</option>
+                  <option value="4">Мальдивы — all inclusive (от 285 000 ₽)</option>
+                  <option value="5">Анталья — семейный отдых (от 98 700 ₽)</option>
+                  <option value="6">Исландия — кольцо чудес (от 219 000 ₽)</option>
+                  <option value="7">Хургада — море и пирамиды (от 112 000 ₽)</option>
+                  <option value="8">Алтай — активный тур (от 78 400 ₽)</option>
+                  <option value="9">Япония — цветение сакуры (от 295 000 ₽)</option>
+                  <option value="10">Дубай + Абу-Даби (от 134 900 ₽)</option>
+                </select>
+              </div>
+
+              <div class="mb-4">
+                <label for="fullName" class="form-label fw-bold">ФИО</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Иванов Иван Иванович" required>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="email" class="form-label fw-bold">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="example@mail.ru" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="phone" class="form-label fw-bold">Телефон</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="+7 (___) ___-__-__" required>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="adults" class="form-label fw-bold">Взрослые (12+ лет)</label>
+                  <select class="form-select" id="adults" required>
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5+</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="children" class="form-label fw-bold">Дети (до 12 лет)</label>
+                  <select class="form-select" id="children" required>
+                    <option value="0" selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="checkin" class="form-label fw-bold">Желаемая дата заезда</label>
+                  <input type="date" class="form-control" id="checkin" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="checkout" class="form-label fw-bold">Желаемая дата выезда</label>
+                  <input type="date" class="form-control" id="checkout" required>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="comment" class="form-label fw-bold">Комментарии / пожелания</label>
+                <textarea class="form-control" id="comment" rows="4" placeholder="Например: номер с видом на море, детская кроватка, аллергия на орехи..."></textarea>
+              </div>
+
+              <div class="alert alert-info mb-4">
+                <strong>Важно:</strong> цена указана от <strong>XXX ₽</strong> за человека.  
+                Точная стоимость зависит от дат, количества человек, категории отеля и доп. услуг.  
+                Менеджер свяжется с вами в ближайшее время и сделает точный расчёт.
+              </div>
+
+              <button type="submit" class="btn btn-success w-100 py-3 fw-bold fs-5">Отправить заявку</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contacts" class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="fw-bold mb-3">TravelDream</h5>
+        <p class="text-white-50">Лицензия туроператора № РТО 012345</p>
+        <p class="small">ИНН 1234567890 / ОГРН 1234567890123</p>
+      </div>
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="fw-bold mb-3">Контакты</h5>
+        <p class="mb-1">+7 (495) 123-45-67</p>
+        <p class="mb-1">info@traveldream.ru</p>
+        <p>Москва, ул. Тверская 12, офис 301</p>
+      </div>
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">Мы в соцсетях</h5>
+        <div class="d-flex gap-4">
+          <a href="https://vk.com/" target="_blank" class="text-white fs-4 text-decoration-none">VK</a>
+          <a href="https://web.telegram.org/" target="_blank" class="text-white fs-4 text-decoration-none">Telegram</a>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4 opacity-25">
+    <div class="text-center small text-white-50">
+      © 2025–2026 TravelDream. Все права защищены.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IT-Клуб Университета</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="branding">
+          <h1>IT-Клуб</h1>
+          <p class="slogan">Делаем крутые проекты вместе</p>
+        </div>
+        <a href="#join" class="btn btn-primary">Вступить в клуб</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <div class="container">
+      <ul>
+        <li><a href="#about">О клубе</a></li>
+        <li><a href="#directions">Направления</a></li>
+        <li><a href="#join">Вступить</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>О клубе</h2>
+        <div class="two-col">
+          <div class="content">
+            <p>IT-Клуб — это студенческое сообщество, где объединяются люди, которым интересно разрабатывать реальные проекты, учиться новому и делиться знаниями.</p>
+            <p>Мы не просто проводим лекции — мы делаем pet-проекты, участвуем в хакатонах, помогаем друг другу с резюме и готовимся к собеседованиям в IT-компаниях.</p>
+            <p>Сейчас в клубе уже более 140 активных участников, 7 постоянных направлений и несколько больших завершённых проектов, которыми мы гордимся.</p>
+            <p>Присоединяйся, если хочешь расти быстрее, чем в одиночку.</p>
+          </div>
+
+          <aside class="aside">
+            <h3>Почему стоит вступить</h3>
+            <ul class="benefits">
+              <li>Реальные коммерческие и open-source проекты в портфолио</li>
+              <li>Менторство от студентов старших курсов и выпускников</li>
+              <li>Регулярные митапы и технические воркшопы</li>
+              <li>Помощь с первым резюме и подготовка к собеседованиям</li>
+              <li>Дружеское и очень активное сообщество</li>
+              <li>Возможность найти тиммейтов и соавторов</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="directions" class="section directions">
+      <div class="container">
+        <h2>Направления работы</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <h3>Frontend</h3>
+            <p>React, TypeScript, Next.js, Zustand, Tailwind, анимации, доступность, производительность</p>
+          </div>
+          <div class="card">
+            <h3>Backend</h3>
+            <p>Node.js / NestJS, Go, Python/FastAPI, PostgreSQL, Docker, REST & GraphQL</p>
+          </div>
+          <div class="card">
+            <h3>Mobile</h3>
+            <p>React Native, Flutter, нативная разработка под iOS/Android</p>
+          </div>
+          <div class="card">
+            <h3>Design</h3>
+            <p>UI/UX, Figma, дизайн-системы, motion-дизайн, брендинг</p>
+          </div>
+          <div class="card">
+            <h3>Data Science</h3>
+            <p>Python, pandas, ML-модели, Computer Vision, NLP</p>
+          </div>
+          <div class="card">
+            <h3>DevOps / SRE</h3>
+            <p>Kubernetes, CI/CD, Terraform, мониторинг, облака</p>
+          </div>
+          <div class="card">
+            <h3>GameDev</h3>
+            <p>Unity, Godot, C#, шейдеры, геймдизайн</p>
+          </div>
+          <div class="card">
+            <h3>QA / Testing</h3>
+            <p>Автотесты, Cypress, Playwright, ручное тестирование</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="join" class="section join">
+      <div class="container">
+        <h2>Вступить в IT-Клуб</h2>
+        <form class="form-join" action="#" method="post">
+          <div class="form-group">
+            <label for="name">Имя и фамилия</label>
+            <input type="text" id="name" name="name" placeholder="Иван Петров" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@university.ru" required>
+          </div>
+
+          <div class="form-group">
+            <label for="direction">Основное направление</label>
+            <select id="direction" name="direction" required>
+              <option value="" disabled selected>Выберите направление</option>
+              <option value="frontend">Frontend</option>
+              <option value="backend">Backend</option>
+              <option value="mobile">Mobile</option>
+              <option value="design">Design / UI/UX</option>
+              <option value="data">Data Science / ML</option>
+              <option value="devops">DevOps / SRE</option>
+              <option value="gamedev">GameDev</option>
+              <option value="qa">QA / Тестирование</option>
+              <option value="other">Другое / Пока не определился</option>
+            </select>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">Согласен с <a href="#">правилами клуба</a></label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-large">Отправить заявку</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 IT-Клуб · Анна Смирнова</p>
+    </div>
+  </footer>
+
+</body>
+</html>

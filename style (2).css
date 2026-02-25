@@ -1,0 +1,64 @@
+:root {
+  --primary:     #0d6efd;
+  --primary-dark:#0b5ed7;
+  --light:       #f8f9fa;
+  --purple:      #6f42c1;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--light);
+  color: #212529;
+  padding-top: 76px;
+  overflow-x: hidden;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://placehold.co/1920x800/0d6efd/ffffff?text=Travel+Dream+Hero') center/cover no-repeat;
+  min-height: 70vh;
+}
+
+.tour-card {
+  transition: all 0.25s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tour-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12) !important;
+}
+
+.tour-card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.tour-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 20px;
+  z-index: 5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.bg-purple { background-color: var(--purple) !important; }
+
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 991px) {
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .hero {
+    min-height: 60vh;
+  }
+}
